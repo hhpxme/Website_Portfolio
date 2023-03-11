@@ -1,0 +1,149 @@
+/*Google Fonts Sarabun weight from 300 to 700*/
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
+
+:root {
+    /* ===== Color Initialize ===== */
+    --pale-pink: #FBE0D9;
+    --beauty-bush: #ECB7B3;
+    --manatee: #8E929B;
+    --skeptic: #A4B8AC;
+    --aqua-haze: #DCE1DA;
+
+    /* ===== Attribute Initialize ===== */
+    --body-color: #FBE0D9;
+    --primary-color: #ECB7B3;
+    --invert-body-color: #A4B8AC;
+    --invert-primary-color: #8E929B;
+    --title-color: #DCE1DA;
+    --text-color: #232323;
+    --invert-text-color: #DEDEDE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "Sarabun", sans-serif;
+    line-height: 1.5;
+}
+
+/* ===== Custom Scroll Bar CSS ===== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: var(--aqua-haze);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--invert-body-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--invert-primary-color);
+}
+
+/* ===== Scroll To Top Button CSS ===== */
+.scroll-button a{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: var(--invert-text-color);
+    background: var(--manatee);
+    padding: 8px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.15);
+    display: none;
+}
+
+/* ===== Body ===== */
+body {
+    background-color: var(--body-color);
+    transition: all 0.5s ease;
+}
+
+/* ===== Navbar Styling ===== */
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 24px 0;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+nav .sticky{
+    background: #4070f4;
+    padding: 13px 0;
+}
+nav .navbar{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+nav .navbar .logo img{
+    background-image: url("images/logo/1.jpg");
+    height: 54px;
+}
+nav.sticky .navbar .logo img{
+    background-image: url("images/logo/2.jpg");
+    height: 54px;
+}
+nav .navbar .menu{
+    display: flex;
+    position: relative;
+}
+nav .navbar .menu li{
+    list-style: none;
+    margin: 0 8px;
+}
+.navbar .menu a{
+    font-size: 18px;
+    font-weight: 500;
+    color: #0E2431;
+    padding: 6px 0;
+    transition: all 0.4s ease;
+}
+.navbar .menu a:hover{
+    color: #4070f4;
+}
+nav.sticky .menu a{
+    color: #FFF;
+}
+nav.sticky .menu a:hover{
+    color: #0E2431;
+}
+.navbar .media-icons a{
+    color: #4070f4;
+    font-size: 18px;
+    margin: 0 6px;
+}
+nav.sticky .media-icons a{
+    color: #FFF;
+}
+
+/* ===== Side Navigation Menu Button CSS ===== */
+nav .menu-btn,
+.navbar .menu .cancel-btn{
+    position: absolute;
+    color: #fff;
+    right: 30px;
+    top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+}
+nav .menu-btn{
+    color: #4070f4;
+}
+nav.sticky .menu-btn{
+    color: #FFF;
+}
+.navbar .menu .menu-btn{
+    color: #fff;
+}
